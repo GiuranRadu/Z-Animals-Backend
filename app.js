@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 
 
 //* Creating Upload Endpoint for images
-app.use('/images', express.static('uploads/images')) 
+app.use('/images', express.static('uploads/images'))
 
 
 //* ROUTES * 
@@ -26,6 +26,8 @@ app.use("/sortAnimals", sortingRoutes)
 app.use('/upload', uploadRoutes)
 
 
+//* TEST ROUTE *
+app.get('/', (req, res, next) => res.send(200))
 
 
 module.exports = app
